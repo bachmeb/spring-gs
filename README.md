@@ -2,7 +2,7 @@
 
 This repo contains a collection of Spring Getting Started Guide tutorials
 
-### Inital setup steps
+### System setup routine
 
 0. Download and install the Java JDK
 0. Add the JDK directory to the JAVA_HOME environment variable
@@ -10,6 +10,9 @@ This repo contains a collection of Spring Getting Started Guide tutorials
 0. Download and install Gradle
   * http://gradle.org/gradle-download/
 0. Add the Gradle bin directory to the local PATH environment variable
+
+### Project setup routine
+
 0. Create a project folder
 0. Go to the project folder in Git Bash
 0. Run git init
