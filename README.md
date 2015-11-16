@@ -21,6 +21,7 @@ This repo contains a collection of Spring Getting Started Guide tutorials
 0. Run git fetch
 0. Run git pull
 0. Run gradle
+1. Run gradle -version
 0. Create a build.gradle file
   * http://spring.io/guides/gs/gradle/
 0. Run gradle build
