@@ -1,5 +1,8 @@
 # spring-gs
 
+#### Download Gradle
+http://gradle.org/gradle-download/
+
 #### Building Java Projects with Gradle
 http://spring.io/guides/gs/gradle/
 
