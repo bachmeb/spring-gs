@@ -1,5 +1,4 @@
-# jdk-1.8-install.md
-
+# jdk-1.8-install
 
 ##### Show all of the environment variables
 	declare
