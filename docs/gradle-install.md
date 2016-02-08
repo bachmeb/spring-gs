@@ -36,5 +36,3 @@ if [ -d "$HOME/opt/gradle" ]; then
     PATH="$PATH:$GRADLE_HOME/bin"
 fi
 ```
-
-[RETURN](../README.md)
