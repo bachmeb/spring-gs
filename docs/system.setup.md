@@ -26,4 +26,4 @@
 1. Run ./gradlew build
 0. Run git add, commit, and push
 
-[INDEX](../README.md)
+##### [INDEX](../README.md)
