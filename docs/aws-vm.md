@@ -1,7 +1,5 @@
 # aws-vm
 
-Build an AWS VM
-
 ##### Create a new vm
 https://aws.amazon.com/ec2/
 
