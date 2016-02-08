@@ -5,7 +5,7 @@
 ### References
 * https://spring.io/guides/gs/consuming-rest/
 
-
+### Directions
 ##### Create the directory structure
 	mkdir -p src/main/java/hello
 
