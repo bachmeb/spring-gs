@@ -10,8 +10,11 @@
 ##### Build a VM and connect
 * [AWS](../docs/aws-vm.md)
 
+##### Install JDK 1.8
+* [JDK 1.8 Install](../docs/jdk-1.8-install.md)
+
 ##### Install Gradle
-* [Setup guide](../docs/gradle-install.md)
+* [Gradle Install](../docs/gradle-install.md)
 
 ##### Create the directory structure
 	mkdir -p src/main/java/hello
