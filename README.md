@@ -4,7 +4,7 @@ This repo contains a collection of Spring Getting Started Guide tutorials
 
 
 
-#### 
+#### [System Setup Routine](./docs/system.setup.md)
 
 ##### gs-consuming-rest
 
