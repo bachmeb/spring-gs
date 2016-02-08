@@ -5,6 +5,8 @@ This repo contains a collection projects based on the Spring Getting Started Gui
 ### References
 * https://spring.io/guides
 
+### Projects
+
 ##### [Building Java Projects with Gradle](./gs-gradle)
 
 ##### [Building a RESTful Web Service](./gs-rest-service)
