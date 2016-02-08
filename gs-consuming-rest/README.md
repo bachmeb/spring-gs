@@ -6,6 +6,12 @@
 * https://spring.io/guides/gs/consuming-rest/
 
 ### Directions
+
+##### Build a VM and connect
+* [AWS](../docs/aws-vm.md)
+
+##### [Install Gradle](../docs/aws-vm.md)
+
 ##### Create the directory structure
 	mkdir -p src/main/java/hello
 
