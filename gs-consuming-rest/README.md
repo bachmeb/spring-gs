@@ -54,7 +54,7 @@ task wrapper(type: Wrapper) {
 	curl http://gturnquist-quoters.cfapps.io/api/random
 
 ##### Create a domain class 
-vim src/main/java/hello/Quote.java
+	vim src/main/java/hello/Quote.java
 ```java
 package hello;
 
