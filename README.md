@@ -1,6 +1,6 @@
 # spring-gs
 
-This repo contains a collection projects based on the Spring Getting Started Guides
+This repository contains a collection projects based on the Spring Getting Started Guides
 
 ### References
 * https://spring.io/guides
