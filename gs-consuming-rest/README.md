@@ -166,5 +166,15 @@ public class Application implements CommandLineRunner {
 }
 ```
 
+##### Build an executable JAR
+	./gradlew build
+
+##### Run the JAR
+	java -jar build/libs/gs-consuming-rest-0.1.0.jar
+
+##### Confirm the output
+```
+```
+
 * * *
 [INDEX](../README.md)
