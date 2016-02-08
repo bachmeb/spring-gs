@@ -11,7 +11,7 @@ Consuming a RESTful Web Service
 
 ##### Create a Gradle build file
 	vim build.gradle
-```
+```gradle
 buildscript {
     repositories {
         mavenCentral()
@@ -55,7 +55,7 @@ task wrapper(type: Wrapper) {
 
 ##### Create a domain class 
 vim src/main/java/hello/Quote.java
-```
+```java
 package hello;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
@@ -97,7 +97,7 @@ public class Quote {
 
 ##### An additional class is needed to embed the inner quotation itself.
 	vim src/main/java/hello/Value.java
-```
+```java
 package hello;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
@@ -138,7 +138,7 @@ public class Value {
 ```
 ##### Write the Application class that uses RestTemplate to fetch the data from our Spring Boot quotation service
     vim src/main/java/hello/Application.java
-```
+```java
 package hello;
 
 import org.slf4j.Logger;
