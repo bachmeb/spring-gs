@@ -16,6 +16,10 @@
 ##### Install Gradle
 * [Gradle Install](../docs/gradle-install.md)
 
+##### Create a project directory
+	mkdir ~/gs-consuming-rest
+	cd ~/gs-consuming-rest
+
 ##### Create the directory structure
 	mkdir -p src/main/java/hello
 
@@ -56,13 +60,15 @@ dependencies {
 }
 
 task wrapper(type: Wrapper) {
-    gradleVersion = '2.3'
+    gradleVersion = '2.10'
 }
 ```
 
 ##### Check the REST resource
 	curl http://gturnquist-quoters.cfapps.io/api/random
-
+```json
+{"type":"success","value":{"id":11,"quote":"I have two hours today to build an app from scratch. @springboot to the rescue!"}}[ec2-user@ip-172-31-36-185 gs-consuming-rest]$
+```
 ##### Create a domain class 
 	vim src/main/java/hello/Quote.java
 ```java
@@ -105,7 +111,7 @@ public class Quote {
 }
 ```
 
-##### An additional class is needed to embed the inner quotation itself.
+##### Add an additional class to embed the inner quotation
 	vim src/main/java/hello/Value.java
 ```java
 package hello;
@@ -176,14 +182,63 @@ public class Application implements CommandLineRunner {
 }
 ```
 
+##### Run the gradle wrapper task
+	gradle wrapper
+```
+:wrapper
+
+BUILD SUCCESSFUL
+
+Total time: 7.344 secs
+```
 ##### Build an executable JAR
 	./gradlew build
+```
+:wrapper
 
+BUILD SUCCESSFUL
+
+Total time: 7.344 secs
+
+This build could be faster, please consider using the Gradle Daemon: https://docs.gradle.org/2.10/userguide/gradle_daemon.html
+[ec2-user@ip-172-31-36-185 gs-consuming-rest]$ ./gradlew build
+:compileJava
+:processResources UP-TO-DATE
+:classes
+:findMainClass
+:jar
+:bootRepackage
+:assemble
+:compileTestJava UP-TO-DATE
+:processTestResources UP-TO-DATE
+:testClasses UP-TO-DATE
+:test UP-TO-DATE
+:check UP-TO-DATE
+:build
+
+BUILD SUCCESSFUL
+
+Total time: 10.252 secs
+```
 ##### Run the JAR
 	java -jar build/libs/gs-consuming-rest-0.1.0.jar
-
-##### Confirm the output
 ```
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v1.3.2.RELEASE)
+
+2016-02-19 11:10:34.618  INFO 21776 --- [           main] hello.Application                        : Starting Application on ip-172-31-36-185 with PID 21776 (/home/ec2-user/gs-consuming-rest/build/libs/gs-consuming-rest-0.1.0.jar started by ec2-user in /home/ec2-user/gs-consuming-rest)
+2016-02-19 11:10:34.630  INFO 21776 --- [           main] hello.Application                        : No active profile set, falling back to default profiles: default
+2016-02-19 11:10:34.736  INFO 21776 --- [           main] s.c.a.AnnotationConfigApplicationContext : Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@689d68bc: startup date [Fri Feb 19 11:10:34 EST 2016]; root of context hierarchy
+2016-02-19 11:10:36.374  INFO 21776 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2016-02-19 11:10:36.751  INFO 21776 --- [           main] hello.Application                        : Quote{type='success', value=Value{id=9, quote='So easy it is to switch container in #springboot.'}}
+2016-02-19 11:10:36.759  INFO 21776 --- [           main] hello.Application                        : Started Application in 2.837 seconds (JVM running for 3.509)
+2016-02-19 11:10:36.763  INFO 21776 --- [       Thread-2] s.c.a.AnnotationConfigApplicationContext : Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@689d68bc: startup date [Fri Feb 19 11:10:34 EST 2016]; root of context hierarchy
+2016-02-19 11:10:36.767  INFO 21776 --- [       Thread-2] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
 ```
 
 * * *
