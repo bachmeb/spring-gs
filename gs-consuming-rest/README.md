@@ -67,7 +67,7 @@ task wrapper(type: Wrapper) {
 ##### Check the REST resource
 	curl http://gturnquist-quoters.cfapps.io/api/random
 ```json
-{"type":"success","value":{"id":11,"quote":"I have two hours today to build an app from scratch. @springboot to the rescue!"}}[ec2-user@ip-172-31-36-185 gs-consuming-rest]$
+{"type":"success","value":{"id":11,"quote":"I have two hours today to build an app from scratch. @springboot to the rescue!"}}
 ```
 ##### Create a domain class 
 	vim src/main/java/hello/Quote.java
