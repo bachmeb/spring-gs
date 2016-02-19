@@ -22,7 +22,7 @@ Building a RESTful Web Service
 
 ##### Make the gradle.build file
     vim build.gradle
-```
+```gradle
 buildscript {
     repositories {
         mavenCentral()
