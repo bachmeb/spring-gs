@@ -193,14 +193,6 @@ Total time: 7.344 secs
 ##### Build an executable JAR
 	./gradlew build
 ```
-:wrapper
-
-BUILD SUCCESSFUL
-
-Total time: 7.344 secs
-
-This build could be faster, please consider using the Gradle Daemon: https://docs.gradle.org/2.10/userguide/gradle_daemon.html
-[ec2-user@ip-172-31-36-185 gs-consuming-rest]$ ./gradlew build
 :compileJava
 :processResources UP-TO-DATE
 :classes
@@ -221,6 +213,8 @@ Total time: 10.252 secs
 ```
 ##### Run the JAR
 	java -jar build/libs/gs-consuming-rest-0.1.0.jar
+
+##### Look for the quote in the log
 ```
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
