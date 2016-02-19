@@ -209,11 +209,11 @@ Total time: 9.174 secs
 2016-02-19 10:50:29.331  INFO 21652 --- [           main] hello.Application                        : Started Application in 5.375 seconds (JVM running for 6.08)
 ```
 ##### Test the service
-* Go to http://localhost:8080/greeting
+* Go to http://[ec2 ip address]:8080/greeting
 ```
 {"id":1,"content":"Hello, World!"}
 ```
-* Provide a name query string parameter with http://localhost:8080/greeting?name=Brian  
+* Provide a name query string parameter with http://[ec2 ip address]:8080/greeting?name=Brian  
 ```
 {"id":2,"content":"Hello, Brian!"}
 ```
