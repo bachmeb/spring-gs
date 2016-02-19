@@ -13,6 +13,10 @@ Building Java Projects with Gradle
 ##### Install Gradle
 * [Gradle Install](../docs/gradle-install.md)
 
+##### Create a project directory
+    mkdir ~/gs-gradle
+    cd ~/gs-gradle
+
 ##### Create the directory structure
     mkdir -p src/main/java/hello
 
