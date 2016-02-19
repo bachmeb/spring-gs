@@ -4,6 +4,7 @@ Consuming a RESTful Web Service
 ### References
 * https://spring.io/guides/gs/consuming-rest/
 * https://docs.spring.io/spring/docs/current/javadoc-api/org/springframework/web/client/RestTemplate.html
+* https://docs.spring.io/spring/docs/current/javadoc-api/org/springframework/web/client/RestTemplate.html#getForObject-java.lang.String-java.lang.Class-java.util.Map-
 
 ### Directions
 
