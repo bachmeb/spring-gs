@@ -55,12 +55,89 @@ dependencies {
 }
 
 task wrapper(type: Wrapper) {
-    gradleVersion = '2.3'
+    gradleVersion = '2.10'
 }
 ```
+##### Create a resource representation class
+    vim src/main/java/hello/Greeting.java
+```java
+package hello;
 
+public class Greeting {
 
+    private final long id;
+    private final String content;
 
+    public Greeting(long id, String content) {
+        this.id = id;
+        this.content = content;
+    }
+
+    public long getId() {
+        return id;
+    }
+
+    public String getContent() {
+        return content;
+    }
+}
+```
+##### Create a resource controller
+    vim src/main/java/hello/GreetingController.java
+```java
+package hello;
+
+import java.util.concurrent.atomic.AtomicLong;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class GreetingController {
+
+    private static final String template = "Hello, %s!";
+    private final AtomicLong counter = new AtomicLong();
+
+    @RequestMapping("/greeting")
+    public Greeting greeting(@RequestParam(value="name", defaultValue="World") String name) {
+        return new Greeting(counter.incrementAndGet(),
+                            String.format(template, name));
+    }
+}
+```
+##### Make the application executable
+    vim src/main/java/hello/Application.java
+```java
+package hello;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class Application {
+
+    public static void main(String[] args) {
+        SpringApplication.run(Application.class, args);
+    }
+}
+```
+##### Build an executable JAR
+    ./gradlew build
+```
+```
+##### Run the JAR file
+    java -jar build/libs/gs-rest-service-0.1.0.jar
+```
+```
+##### Test the service
+* Go to http://localhost:8080/greeting
+```
+{"id":1,"content":"Hello, World!"}
+```
+* Provide a name query string parameter with http://localhost:8080/greeting?name=Brian  
+```
+{"id":2,"content":"Hello, Brian!"}
+```
 
 * * *
 [INDEX](../README.md)
